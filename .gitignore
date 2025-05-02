@@ -40,3 +40,6 @@ wwwroot/node_modules/
 
 # Optional: Ignore migrations snapshots
 Migrations/*.cs
+
+# Data-Bases
+.db

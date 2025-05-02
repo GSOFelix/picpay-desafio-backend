@@ -42,7 +42,7 @@ namespace Aplicacao.UseCases
                 UserValidations.ValidateUser(sender, transectionDto.ammount);
 
                 //consulta serviço Autorizador
-                if(! await _authorizeService.VerifyAuthorization())
+                if (!await _authorizeService.VerifyAuthorization())
                     throw new UnauthorizedAccessException("Transação não autorizada");
 
                 //criar a transação e salva;
@@ -74,9 +74,7 @@ namespace Aplicacao.UseCases
 
         public async Task<List<Transactions>> SelectAllTransactions()
         {
-            var response =  await _repository.GetAllAsync();
-
-            return response.ToList() ??
+            return await _repository.GetAllAsync() ??
                 throw new KeyNotFoundException($"Nehuma transação encontrada");
         }
     }

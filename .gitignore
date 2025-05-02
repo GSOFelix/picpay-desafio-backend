@@ -43,3 +43,9 @@ Migrations/*.cs
 
 # Data-Bases
 .db
+picpay-simplificado/Infra/Migrations/20250429173725_InitalMigration.cs
+picpay-simplificado/Infra/Migrations/20250429173725_InitalMigration.Designer.cs
+picpay-simplificado/Infra/Migrations/AppDbContextModelSnapshot.cs
+picpay-simplificado/Api/app.db
+picpay-simplificado/Api/app.db-shm
+picpay-simplificado/Api/app.db-wal

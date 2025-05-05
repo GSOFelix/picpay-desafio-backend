@@ -23,8 +23,8 @@ namespace Api.Controllers
             return CreatedAtAction(nameof(SelectUser),new {id = response.Id},response);
         }
 
-        [HttpGet("by-id")]
-        public async Task<ActionResult> SelectUser([FromQuery] long id)
+        [HttpGet("{id}")]
+        public async Task<ActionResult> SelectUser([FromRoute] long id)
         {
             return Ok(await _useCase.GetUserById(id));
         }

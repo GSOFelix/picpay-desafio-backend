@@ -24,8 +24,8 @@ namespace Api.Controllers
             return CreatedAtAction(nameof(MakeTransfer), new { id = transaction.Id }, transaction);
         }
 
-        [HttpGet("by-id")]
-        public async Task<ActionResult> SelecTransactionById([FromQuery] long id)
+        [HttpGet("{id}")]
+        public async Task<ActionResult> SelecTransactionById([FromRoute] long id)
         {
             return Ok(await _useCase.SelectTransectionById(id));
         }
